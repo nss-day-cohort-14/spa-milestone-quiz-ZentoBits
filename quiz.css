@@ -1,0 +1,86 @@
+#navbar {
+	margin-bottom: 40px;
+}
+
+#nav {
+	padding-top: 15px;
+}
+
+.logo {
+	text-align: center;
+	color: purple;
+}
+
+#garage {
+	text-align: center;
+}
+
+p {
+	text-align: center;
+}
+
+hr {
+	height: 1px;
+	background: grey;
+}
+
+#car--1 {
+	border: 3px solid FireBrick;
+	margin: 0 10px 10px 10px;
+	width: 400px;
+}
+
+#car--1:hover {
+	border: 6px solid FireBrick;
+	background: #eaeaea;
+}
+
+#car--2 {
+	border: 3px solid SlateGrey;
+	margin: 0 10px 10px 10px;
+	width: 400px;
+}
+
+#car--2:hover {
+	border: 6px solid SlateGrey;
+	background: #eaeaea;
+}
+
+#car--3 {
+	border: 3px solid DarkRed;
+	margin: 0 10px 10px 10px;
+	width: 400px;
+}
+
+#car--3:hover {
+	border: 6px solid DarkRed;
+	background: #eaeaea;
+}
+
+img {
+	width: 90%;
+	height: 240px;
+	margin-bottom: 40px;
+}
+
+@media (max-width: 767px) {
+	button {
+		margin-left: 42.5%;
+	}
+
+	#car--1 {
+		width: 95%;
+	}
+
+	#car--2 {
+		width: 95%;
+	}
+
+	#car--3 {
+		width: 95%;
+	}
+}
+
+
+
+
