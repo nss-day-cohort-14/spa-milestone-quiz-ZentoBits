@@ -30,31 +30,16 @@ hr {
 	width: 400px;
 }
 
-#car--1:hover {
-	border: 6px solid FireBrick;
-	background: #eaeaea;
-}
-
 #car--2 {
 	border: 3px solid SlateGrey;
 	margin: 0 10px 10px 10px;
 	width: 400px;
 }
 
-#car--2:hover {
-	border: 6px solid SlateGrey;
-	background: #eaeaea;
-}
-
 #car--3 {
 	border: 3px solid DarkRed;
 	margin: 0 10px 10px 10px;
 	width: 400px;
-}
-
-#car--3:hover {
-	border: 6px solid DarkRed;
-	background: #eaeaea;
 }
 
 img {

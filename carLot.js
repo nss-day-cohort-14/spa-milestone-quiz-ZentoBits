@@ -1,10 +1,5 @@
 var CarLot = (function(iife) {
-
   var inventory = [];
-
-  iife.addCars = function(acr) {
-    inventory.push({car});
-  };
 
   var messageRequest = new XMLHttpRequest();
 
@@ -20,19 +15,14 @@ var CarLot = (function(iife) {
 
   var garage = document.getElementById("garage");
 
-  iife.getMessageArray = function() {
-    return inventory;
-  };
+  function xhrTransferError() {
+    // console.log("error", An error occurred while transfering the data);
+  }
 
-function xhrTransferError() {
-  // console.log("error", An error occurred while transfering the data);
-}
-  function parseData(event) {
+    function parseData(event) {
     inventory = JSON.parse(event.target.responseText).cars;
     inventory.forEach(function(currentCar) {
       var CarCard = "";
-      // var originalCar = inventory[currentCar];
-      // console.log("originalCar", originalCar);
 
       counter++;
       CarCard = `<div id="car--${counter}" class="col-md-4">
@@ -45,13 +35,15 @@ function xhrTransferError() {
 
       var newDiv = document.createElement("article");
       newDiv.innerHTML = CarCard;
-      var newAttr = document.createAttribute("id");
-      newAttr.value = `cardWrapper--${counter}`;
+      var newAttr = document.createAttribute("class");
+      newAttr.value = "wrapper";
       newDiv.setAttributeNode(newAttr);
       garage.appendChild(newDiv);
+
+      var card = document.getElementById(`car--${counter}`);
     });
   }
-
+  // console.log(iife);  
   return iife;
 
 }(CarLot || {}));
