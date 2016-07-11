@@ -1,0 +1,137 @@
+/******************
+NAV BAR
+******************/
+
+body {
+	background: linear-gradient(to left, #005C97 , #363795);
+}
+
+#navbar {
+	margin-bottom: 30px;
+	background: rgba(0, 0, 0, .5);
+	height: 100px;
+	box-shadow: 5px 5px 5px 3px rgba(0, 0, 0, .35);
+}
+
+#nav {
+	padding-top: 20px;
+
+}
+
+#textBox {
+	height: 40px;
+	width: 85px;
+	margin-left: 20px;
+	font-size: 18px;
+	background: rgba(0, 0, 0, .8);
+	color: rgba(255, 255, 255, .6);
+}
+
+#textBox:focus {
+	animation-name: barExtend;
+	animation-fill-mode: forwards;
+	animation-iteration-count: 1;
+	animation-duration: 1s;
+	animation-timing-function: ease;
+}
+
+@keyframes barExtend {
+	0%		{width: 90px;}
+	100%	{width: 430px;}
+}
+
+.logo {
+	text-align: center;
+	color: #e0e0e0;
+	font-family: 'Lobster', cursive;
+	font-size: 50px;
+}
+
+
+/******************
+BODY
+******************/
+
+#garage {
+	text-align: center;
+	left: 30px;
+}
+
+p {
+	text-align: center;
+}
+
+hr {
+	height: 1px;
+	background: grey;
+}
+
+img {
+	width: 90%;
+	height: 240px;
+	margin-bottom: 40px;
+	border-radius: 15px;
+}
+
+.card {
+	margin-top: 50px;
+	margin-left: 35px; 
+	margin-right: 5px;
+	width: 400px;
+	border-radius: 5px 50px;
+	color: #eaeaea;
+	box-shadow: 7px 7px 7px rgba(0, 0, 0, .3);
+}
+
+h3 {
+	font-family: 'Quicksand', sans-serif;
+}
+
+h4 {
+	font-family: 'Fredoka One', cursive;
+	letter-spacing: 3px;
+}
+
+@media (max-width: 991px) {
+	#navbar {
+		position: fixed;
+		width: 100%;
+		z-index: 1000;
+	}
+
+	#garage {
+		margin-top: 130px;
+	}
+
+	.card {
+		width: 400px;
+		margin: 20px auto;
+	}
+
+	.logo {
+		margin-right: 70px;
+	}
+}
+
+@media (max-width: 767px) {
+	#navbar {
+		height: 130px;
+	}
+
+	#textBox {
+		position: absolute;
+		margin-left: 12%;
+	}
+
+	.logo {
+		position: absolute;
+		bottom: -85px;
+		left: 38%;
+	}
+
+	#garage {
+		margin-top: 150px;
+	}
+}
+
+
