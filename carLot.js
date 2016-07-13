@@ -1,49 +1,21 @@
-var CarLot = (function(iife) {
-  var inventory = [];
+var CarLot = (function (carLot) {
 
-  var messageRequest = new XMLHttpRequest();
+  carLot.loadInventory = function() {
+    var messageRequest = new XMLHttpRequest();
+    messageRequest.addEventListener("load", carLot.loadSuccess);
+    messageRequest.open("GET", "inventory.json");
+    messageRequest.send();
+  };
 
-  messageRequest.open("GET", "inventory.json");
+  carLot.loadSuccess = function() {
+    var carsJSON = JSON.parse(this.responseText);
+    var parsedCars = carsJSON.cars
+    carLot.cardBuilder(parsedCars);
+    return parsedCars;
+  };
 
-  messageRequest.send();
+  carLot.loadInventory();
 
-  messageRequest.addEventListener("error", xhrTransferError);
-
-  messageRequest.addEventListener("load", parseData);
-
-  var counter = 0;
-
-  var garage = document.getElementById("garage");
-
-  function xhrTransferError() {
-    // console.log("error", An error occurred while transfering the data);
-  }
-
-    function parseData(event) {
-    inventory = JSON.parse(event.target.responseText).cars;
-    inventory.forEach(function(currentCar) {
-      var CarCard = "";
-
-      counter++;
-      CarCard = `<div id="car--${counter}" class="col-md-4">
-                  <h3>${currentCar.year} ${currentCar.make} <h4>${currentCar.model}</h4></h3>
-                  <hr>
-                  <h5>$ ${currentCar.price}</h5>
-                  <img src="${currentCar.img}">
-                  <p>${currentCar.description}</p>
-                </div>`;
-
-      var newDiv = document.createElement("article");
-      newDiv.innerHTML = CarCard;
-      var newAttr = document.createAttribute("class");
-      newAttr.value = "wrapper";
-      newDiv.setAttributeNode(newAttr);
-      garage.appendChild(newDiv);
-
-      var card = document.getElementById(`car--${counter}`);
-    });
-  }
-  // console.log(iife);  
-  return iife;
-
-}(CarLot || {}));
+  return carLot;
+  
+})(CarLot || {});

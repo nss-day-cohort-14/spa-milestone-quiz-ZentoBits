@@ -52,11 +52,6 @@ body {
 BODY
 ******************/
 
-#garage {
-	text-align: center;
-	left: 30px;
-}
-
 p {
 	text-align: center;
 }
@@ -73,11 +68,11 @@ img {
 	border-radius: 15px;
 }
 
-.card {
-	margin-top: 50px;
-	margin-left: 35px; 
-	margin-right: 5px;
-	width: 400px;
+.carCard {
+	margin-top: 30px;
+	margin-right: 10px;
+	text-align: center;
+	width: 370px;
 	border-radius: 5px 50px;
 	color: #eaeaea;
 	box-shadow: 7px 7px 7px rgba(0, 0, 0, .3);
@@ -99,11 +94,7 @@ h4 {
 		z-index: 1000;
 	}
 
-	#garage {
-		margin-top: 130px;
-	}
-
-	.card {
+	.carCard {
 		width: 400px;
 		margin: 20px auto;
 	}
@@ -127,10 +118,6 @@ h4 {
 		position: absolute;
 		bottom: -85px;
 		left: 38%;
-	}
-
-	#garage {
-		margin-top: 150px;
 	}
 }
 
