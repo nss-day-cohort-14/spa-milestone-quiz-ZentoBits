@@ -1,0 +1,34 @@
+{
+  "cars": [
+    {
+      "make": "Nissan",
+      "model": "Rogue",
+      "year": "2006",
+      "price": "8999",
+      "color": "FireBrick",
+      "img": "http://www.gannett-cdn.com/-mm-/a90d73fca176301cd32ba3a8e3a64712dc2617cf/c=606-294-2514-1731&r=x404&c=534x401/local/-/media/USATODAY/GenericImages/2013/09/27/1380316518000-2013-nissan-rogue-003.jpg",
+      "purchased": false,
+      "description": "This is an immaculate 2006 Nissan Rogue with only 25000 miles on it. Leather seats, power everything."
+    },
+    {
+      "make": "Honda",
+      "model": "Civic",
+      "year": "2010",
+      "price": "4999",
+      "color": "SlateGrey",
+      "img": "http://spidercars.net/wp-content/uploads/images/2010-Honda-Civic_8532.jpg",
+      "purchased": false,
+      "description": "This is an immaculate 2010 Honda Civic with only 10000 miles on it. Cloth seats, power everything."
+    },
+    {
+      "make": "Ford",
+      "model": "Mustang",
+      "year": "2006",
+      "price": "7999",
+      "color": "DarkRed",
+      "img": "http://www.conceptcarz.com/images/Ford/2006_ford_mustang_manu_003.jpg",
+      "purchased": false,
+      "description": "This is an extremely 'loved' 2006 Ford Mustang with 186000 miles on it. Cloth seats, power everything."
+    }
+  ]
+}
