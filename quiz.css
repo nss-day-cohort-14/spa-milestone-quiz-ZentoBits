@@ -70,12 +70,13 @@ img {
 
 .carCard {
 	margin-top: 30px;
-	margin-right: 10px;
 	text-align: center;
+	margin-right: 0;
 	width: 370px;
 	border-radius: 5px 50px;
 	color: #eaeaea;
 	box-shadow: 7px 7px 7px rgba(0, 0, 0, .3);
+	opacity: 0;
 }
 
 h3 {
@@ -87,6 +88,22 @@ h4 {
 	letter-spacing: 3px;
 }
 
+.carCard {
+	animation-name: fadeIn;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-in;
+	animation-duration: 1s;
+	animation-delay: .7s;
+}
+
+@keyframes fadeIn {
+	0% 		{opacity: 0; top: -20px; margin-right: 0;}
+	50%		{opacity: .5; top: 5px; margin-right: 10px;}
+	100%   	{opacity: 1; top: 0px; margin-right: 10px;}
+}
+
+
+
 @media (max-width: 991px) {
 	#navbar {
 		position: fixed;
@@ -97,6 +114,7 @@ h4 {
 	.carCard {
 		width: 400px;
 		margin: 20px auto;
+		top: 120px;
 	}
 
 	.logo {
@@ -107,6 +125,10 @@ h4 {
 @media (max-width: 767px) {
 	#navbar {
 		height: 130px;
+	}
+
+	.carCard {
+		top: 150px;
 	}
 
 	#textBox {

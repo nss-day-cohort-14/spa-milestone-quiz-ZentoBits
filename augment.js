@@ -4,8 +4,9 @@ var CarLot = (function (carLot) {
 
 	var selected = document.getElementsByClassName('selected')
 
-  carLot.cardBuilder = function(parsedCars) {
-    for (var i = 0; i < parsedCars.length; i++) {
+	// function to build the "card" for each car by looping through the parsed cars
+  	carLot.cardBuilder = function(parsedCars) {
+    	for (var i = 0; i < parsedCars.length; i++) {
 			var newDiv = document.createElement(`div`);
 
 			var content = `
@@ -17,9 +18,11 @@ var CarLot = (function (carLot) {
 				<p class='card'>${parsedCars[i].description}</p>
 				`
 			newDiv.innerHTML = content;
+			// adds the new class to the card
 			newDiv.setAttribute('class', `col-md-4 carCard`);
 			garage.appendChild(newDiv);
 
+			// grabs the "carCard" class to apply the border/background styling
 			var cardStyle = document.getElementsByClassName('carCard');
 
 			cardStyle[i].style.border = "5px solid";
