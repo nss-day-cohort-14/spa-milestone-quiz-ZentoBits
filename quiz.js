@@ -6,13 +6,25 @@ var CarLot = (function (carLot) {
 
 			currentCard.addEventListener("click", function(){
 				var clearSelected = document.getElementsByClassName('selected')
-
 				for (var i = 0; i < clearSelected.length; i++) {
 					clearSelected[i].classList.remove('selected');
 				}
-				this.classList.add('selected'); // add selected class to clicked item
+				this.classList.add('selected');
 				var textBox = document.getElementById('textBox')
 				textBox.focus();
+				textBox.value = "";
+
+				function hasClass(element, cls) {
+    				return (' ' + element.className + ' ').indexOf(' ' + cls + ' ') > -1;
+				}
+
+				if (hasClass(this, "selected")) {
+					for (var i = 0; i < card.length; i++) {
+						card[i].style.borderWidth = "5px";
+					}
+					this.style.borderWidth = "8px";
+				}
+
 			});
 		}
 		var textBox = document.getElementById('textBox')

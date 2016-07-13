@@ -2,7 +2,7 @@ var CarLot = (function (carLot) {
 
 	var garage = document.getElementsByClassName('container').item(0)
 
-
+	var selected = document.getElementsByClassName('selected')
 
   carLot.cardBuilder = function(parsedCars) {
     for (var i = 0; i < parsedCars.length; i++) {
@@ -26,6 +26,8 @@ var CarLot = (function (carLot) {
 			cardStyle[i].style.borderColor = `${parsedCars[i].color}`
 			cardStyle[i].style.background = "rgba(255, 255, 255, .1)"
     }
+    	;
+    	
 		var card = document.getElementsByClassName('carCard');
 		carLot.eventListeners(card, parsedCars);
   }
